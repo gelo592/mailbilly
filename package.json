@@ -1,7 +1,6 @@
 {
   "name": "mail billy",
   "version": "0.0.1",
-  "description": 'mail billy one pager',
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
