@@ -7,13 +7,14 @@ from flask.ext.sqlalchemy import SQLAlchemy
 parser = argparse.ArgumentParser(description='blah')
 parser.add_argument('--furreal', dest='furreal', action='store_true')
 
+app = Flask(__name__)
+
 args = parser.parse_args()
 if args.furreal:
   app.config.from_pyfile('config.py')
 else:
   app.config.from_pyfile('test_config.py')
 
-app = Flask(__name__)
 db = SQLAlchemy(app)
 
 @app.route('/')
