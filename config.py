@@ -1,1 +1,3 @@
-SQLALCHEMY_DATABASE_URI = "postgresql://billyadmin:linkii@localhost/mailbilly_db"
+SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+HOST = '0.0.0.0'
+PORT = 80
