@@ -7,6 +7,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 parser = argparse.ArgumentParser(description='blah')
 parser.add_argument('--furreal', dest='furreal', action='store_true')
 
+args = parser.parse_args()
 if args.furreal:
   app.config.from_pyfile('config.py')
 else:
