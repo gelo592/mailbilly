@@ -1,0 +1,157 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #435463;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Kadwa', serif;
+  font-size: 48px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+}
+
+table {
+  background-color: #fff;
+}
+
+.sub-kind {
+  font-size: 11px;
+}
+
+.row:nth-child(even) {
+  background: #F5F7FB;
+}
+
+.row {
+  padding: 60px 100px;
+}
+
+.page-head {
+  font-family: 'Satisfy', cursive;
+  //font-family: 'Londrina Sketch', cursive;
+  text-align: center;
+  font-size: 90px;
+  margin-top: 0px;
+}
+
+.mail-box {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px rgba(128, 128, 128, 0.27);
+}
+
+.mail-sub {
+  padding-bottom: 10px;
+  border-bottom: solid 1px #C3C5C7;
+}
+
+.mail-to {
+  padding-bottom: 10px;
+  border-bottom: solid 1px #C3C5C7;
+}
+
+.billy {
+  width: 100%;
+}
+
+.accent-text {
+  color: #DE8E3E;
+  text-align: center;
+  font-size: 32px;
+}
+
+.counting {
+  width: 50px;
+  //display: block;
+}
+
+.counting-msg {
+  display: inline-block;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+.counting-msg:first-letter {
+  font-size: 48px;
+  float: left;
+  line-height: 32px;
+  padding-right: 4px;
+  font-family: "untitled-font-2";
+}
+
+.bubs-box {
+  position: relative;
+  margin: 50px 0;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.speech-bubs {
+  text-align: center;
+  position: absolute;
+  border-radius: 30px;
+  background: #F5F7FB;
+  padding: 16px;
+  display: inline-block;
+  width: 300px;
+  box-shadow: 0px 1px 2px rgba(128, 128, 128, 0.27);
+}
+
+.speech-bubs p {
+  font-size: 20px;
+}
+
+.bubs-top {
+  left: -235px;
+  top: -50px;
+}
+
+.bubs-top::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: 50px;
+  border-width: 40px 0px 0 40px;
+  border-style: solid;
+  border-color: #F5F7FB transparent;
+  display: block;
+  width: 0;
+}
+
+.bubs-bottom {
+  left: 110px;
+  top: 265px;
+}
+
+.bubs-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 45px;
+  right: -40px;
+  border-width: 40px 40px 0px 0px;
+  border-style: solid;
+  border-color: #F5F7FB transparent;
+  display: block;
+  width: 0;
+}
+
+.bubs-mid {
+  right: 40px;
+  top: 82px;
+}
+
+.bubs-mid::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: -40px;
+  border-width: 0px 0px 40px 40px;
+  border-style: solid;
+  border-color: #F5F7FB transparent;
+  display: block;
+  width: 0;
+}
