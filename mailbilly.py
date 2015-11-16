@@ -18,4 +18,4 @@ if __name__ == '__main__':
     else:
       app.config.from_pyfile('test_config.py')
 
-    app.run(host=app.config['HOST'], port=app.config['PORT']
+    app.run(host=app.config['HOST'], port=app.config['PORT'])
