@@ -5,14 +5,17 @@ from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 
 parser = argparse.ArgumentParser(description='blah')
-parser.add_argument('--furreal', dest='furreal', action='store_true')
+parser.add_argument('--furreal', help="do it for reals",
+                    action="store_true")
 
 app = Flask(__name__)
 
 args = parser.parse_args()
+print args.furreal
 if args.furreal:
   app.config.from_pyfile('config.py')
 else:
+  print "boob"
   app.config.from_pyfile('test_config.py')
 
 db = SQLAlchemy(app)

@@ -12,16 +12,29 @@ h3 {
   margin-top: 0px;
 }
 
+h4 {
+  margin-top: 0;
+}
+
 table {
   background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(128, 128, 128, 0.27);
+  border-radius: 4px;
+}
+.table {
+  margin-bottom: 50px;
 }
 
 .sub-kind {
   font-size: 11px;
 }
 
-.row:nth-child(even) {
+.row:nth-child(2) {
   background: #F5F7FB;
+}
+
+.row:nth-child(3) {
+  background: #E7EAED;
 }
 
 .row {
@@ -30,7 +43,6 @@ table {
 
 .page-head {
   font-family: 'Satisfy', cursive;
-  //font-family: 'Londrina Sketch', cursive;
   text-align: center;
   font-size: 90px;
   margin-top: 0px;
@@ -154,4 +166,20 @@ table {
   border-color: #F5F7FB transparent;
   display: block;
   width: 0;
+}
+
+.size-example {
+  height: 300px;
+  width: 100%;
+  overflow-y: scroll;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 2px 12px;
+  box-shadow: 0px 1px 2px rgba(128, 128, 128, 0.27);
+  border-radius: 4px;
+}
+
+.size-switcher {
+
 }
