@@ -222,11 +222,11 @@ p.accent-text {
 @media (max-width: 767px) {
   .page-head {
     font-size: 60px;
+    margin-bottom: 60px;
   }
 
   .bubs-box {
-    margin-left: 17%;
-    margin-right: 17%;
+    width: 65%;
   }
   .row {
     padding: 60px 10px;
@@ -245,6 +245,17 @@ p.accent-text {
   }
   h3 {
     font-size: 38px;
+  }
+  .speech-bubs {
+    padding: 10px;
+    width: 188px;
+    font-size: 10px;
+  }
+  .bubs-top {
+    left: -135px;
+  }
+  .speech-bubs p {
+    font-size: 12px;
   }
 }
 
