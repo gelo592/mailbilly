@@ -75,7 +75,7 @@ a:hover {
 }
 
 .billy {
-  width: 100%;
+  width: 320px;
 }
 
 h3.accent-text {
@@ -219,7 +219,35 @@ p.accent-text {
   outline: none;
 }
 
+
+
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
 @media (max-width: 767px) {
+  .billy {
+    width: 240px;
+  }
   .page-head {
     font-size: 60px;
     margin-bottom: 60px;
