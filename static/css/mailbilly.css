@@ -192,11 +192,23 @@ table {
     margin-left: 17%;
     margin-right: 17%;
   }
+  .row {
+    padding: 60px 10px;
+  }
   .row:nth-child(1) {
     padding: 20px 40px;
   }
   .accent-text {
     font-size: 22px;
+  }
+  .size-switcher button {
+    font-size: 11px;
+  }
+  .mail-box {
+    margin-top: 30px;
+  }
+  h3 {
+    font-size: 38px;
   }
 }
 
