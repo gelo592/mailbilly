@@ -97,7 +97,6 @@ table {
 .bubs-box {
   position: relative;
   margin: 50px 0;
-  width: 30%;
   margin-left: 35%;
   margin-right: 35%;
 }
@@ -168,7 +167,7 @@ table {
   width: 0;
 }
 
-.size-example {
+.samples {
   height: 300px;
   width: 100%;
   overflow-y: scroll;
@@ -180,6 +179,34 @@ table {
   border-radius: 4px;
 }
 
-.size-switcher {
+.btn:focus:active, .btn:focus {
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .page-head {
+    font-size: 60px;
+  }
+
+  .bubs-box {
+    margin-left: 17%;
+    margin-right: 17%;
+  }
+  .row:nth-child(1) {
+    padding: 20px 40px;
+  }
+  .accent-text {
+    font-size: 22px;
+  }
+}
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media (min-width: 1200px) {
 
 }
