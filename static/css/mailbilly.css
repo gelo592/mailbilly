@@ -78,10 +78,16 @@ a:hover {
   width: 100%;
 }
 
-.accent-text {
+h3.accent-text {
   color: #DE8E3E;
   text-align: center;
   font-size: 32px;
+}
+
+p.accent-text {
+  color: #DE8E3E;
+  text-align: center;
+  font-size: 16px;
 }
 
 .counting {
