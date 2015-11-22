@@ -75,7 +75,8 @@ a:hover {
 }
 
 .billy {
-  width: 320px;
+  min-width: 320px;
+  width: 100%;
 }
 
 h3.accent-text {
