@@ -247,6 +247,7 @@ p.accent-text {
 
 @media (max-width: 767px) {
   .billy {
+    min-width: 240px;
     width: 240px;
   }
   .page-head {
