@@ -151,22 +151,22 @@ $(function() {
       category = "";
     }
     if(words <= 50) {
-      category = "Quickie";
+      category = "Quickie: ";
     }
     else if(words <= 150) {
-      category = "Shortie";
+      category = "Shortie: ";
     }
     else if(words <= 300) {
-      category = "Biggie";
+      category = "Biggie: ";
     }
     else if(words <= 450) {
-      category = "Fattie";
+      category = "Fattie: ";
     }
     else if(words <= 600) {
-      category = "Super Size";
+      category = "Super Size: ";
     }
     else if(words >= 601) {
-      category = "Special Order";
+      category = "Special Order: ";
     }
 
     console.log(category);
