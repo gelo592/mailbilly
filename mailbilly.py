@@ -15,7 +15,6 @@ print args.furreal
 if args.furreal:
   app.config.from_pyfile('config.py')
 else:
-  print "boob"
   app.config.from_pyfile('test_config.py')
 
 db = SQLAlchemy(app)
@@ -23,6 +22,10 @@ db = SQLAlchemy(app)
 @app.route('/')
 def index():
     return render_template("index.html")
+
+@app.route('/supersecretlongurlwhywouldyougohere')
+def staging():
+  return render_template("staging.html")
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
