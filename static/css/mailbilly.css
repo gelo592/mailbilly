@@ -209,6 +209,11 @@ p.accent-text {
   border-radius: 4px;
 }
 
+.size-switcher {
+  float: right;
+  padding-bottom: 10px;
+}
+
 .btn,
 .btn-default:hover,
 .btn-default.active,
@@ -236,20 +241,36 @@ p.accent-text {
 }
 
 /* bundle row */
-.bundle {
-  display: inline-block;
-  width: 200px;
+.bundle-wrap {
+  padding-left: 50%;
+  margin-left: -388px;
 }
 
+.bundle {
+  box-shadow: 0px 1px 2px rgba(128, 128, 128, 0.27);
+}
+
+
 .bundle-img {
-  width: 200px;
-  padding: 20px;
+  max-width: 130px;
+  padding: 10px 25px;
 }
 
 .bundlink {
   width: 200px;
   text-align: center;
   display: inline-block;
+  text-align: center;
+}
+
+.big-money {
+  margin-bottom: -6px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.little-money {
+  font-size: 10px;
 }
 
 .typed-cursor {
