@@ -1,1 +1,1 @@
-web: python mailbilly.py
+web: python mailbilly.py --furreal
