@@ -28,8 +28,9 @@
       </div>
       <div id="billynav" class="collapse navbar-collapse">
         <ul class="nav navbar-nav pull-right">
-          <li class="navie"><a href="#how">How</a></li>
-          <li class="navie"><a href="#price">Tarif</a></li>
+          <li class="navie"><a href="#how">Comment ça marche </a></li>
+          <li class="navie"><a href="#price">Tarifs</a></li>
+          <li class="navie"><a href="#size">Taille</a></li>
           <li class="navie"><a href="#faq">FAQ</a></li>
         </ul>
       </div><!--/.nav-collapse -->
@@ -96,7 +97,7 @@
       </div>
     </div><!-- end .row -->
 
-    <div class="row">
+    <div id="price" class="row">
       <h3 id="prix"> Nos tarifs </h3>
       <div class="hidden-xs col-sm-offset-1 col-sm-10 col-md-6 col-md-offset-0">
         <h4>Relecture</h4>
@@ -227,41 +228,51 @@
       </div><!-- end .col-sm-6 -->
 
       <div class="col-sm-12">
-        <p>Achetez un paquet de crédits afin de faciliter l’envoi du message pour Billy et vous recevrez 10% de crédit en bonus !</p>
+        <p class="center-text" >Achetez un paquet de crédits et vous recevrez 10% de crédit en bonus !</p>
         <div class="bundle-wrap">
           <div class="bundle btn-group" role="group" aria-label="...">
-            <button class="btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle1">
-              <p class="big-money">25€</p>
+            <a class=" bundle-btn btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle1">
               <img class="bundle-img" src="/static/img/bundle_100.png" />
-              <p class="little-money">+2,50€ offerts</p>
-            </button>
-            <button class="btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle2">
-              <p class="big-money">75€</p>
+              <div class="buy-btn">
+                <p class="big-money">25€</p>
+                <p class="little-money">+2,50€ offerts</p>
+              </div>
+            </a>
+              <a class=" bundle-btn btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle2">
               <img class="bundle-img" src="/static/img/bundle_200.png" />
-              <p class="little-money">+7,50€ offerts</p>
-            </button>
-            <button class="btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle3">
-              <p class="big-money">150€</p>
+              <div class="buy-btn">
+                <p class="big-money">75€</p>
+                <p class="little-money">+7,50€ offerts</p>
+              </div>
+            </a>
+            <a class=" bundle-btn btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle3">
               <img class="bundle-img" src="/static/img/bundle_300.png" />
-              <p class="little-money">+15€ offerts</p>
-            </button>
-            <button class="btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle4">
-              <p class="big-money">300€</p>
+              <div class="buy-btn">
+                <p class="big-money">150€</p>
+                <p class="little-money">+15€ offerts</p>
+              </div>
+            </a>
+            <a class=" bundle-btn btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle4">
               <img class="bundle-img" src="/static/img/bundle_400.png" />
-              <p class="little-money">+30€ offerts</p>
-            </button>
-            <button class="btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle5">
-              <p class="big-money">500€</p>
+              <div class="buy-btn">
+                <p class="big-money">300€</p>
+                <p class="little-money">+30€ offerts</p>
+              </div>
+            </a>
+            <a class=" bundle-btn btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle5">
               <img class="bundle-img" src="/static/img/bundle_500.png" />
-              <p class="little-money">+50€ offerts</p>
-            </button>
+              <div class="buy-btn">
+                <p class="big-money">500€</p>
+                <p class="little-money">+50€ offerts</p>
+                </div>
+            </a>
           </div>
         </div>
       </div><!-- end .col-sm-6 -->
     </div><!-- end .row -->
 
 
-    <div id="price"  class="row" id="bundles">
+    <div class="row" id="size">
       <h3>Exemple de taille de texte</h3>
       <div class="col-xs-10 col-xs-offset-1">
         <span id="category">Quickie: </span><span id="word-count">31</span><span> mots</span>
@@ -326,6 +337,16 @@
   <script type='text/javascript'>
   jQuery.noConflict(true);
   </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70860149-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
   {% endblock %}
 </body>
 

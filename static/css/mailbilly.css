@@ -37,6 +37,10 @@ a:hover {
   color: #DE8E3E;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .table {
   margin-bottom: 50px;
 }
@@ -246,10 +250,41 @@ p.accent-text {
   margin-left: -388px;
 }
 
-.bundle {
+.bundle-btn {
   box-shadow: 0px 1px 2px rgba(128, 128, 128, 0.27);
 }
 
+.buy-btn {
+  background-color: #DE8E3E;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+.bundle-btn.btn-default.active,
+.bundle-btn.btn-default:active,
+.btn-default:hover,
+.btn-default.hover,
+.btn-default.focus,
+.btn-default:focus {
+  background-color: #fff;
+}
+
+.bundle-btn.btn-default.active .buy-btn,
+.bundle-btn.btn-default:active .buy-btn,
+.btn-default:hover .buy-btn,
+.btn-default.hover .buy-btn,
+.btn-default.focus .buy-btn,
+.btn-default:focus .buy-btn{
+  color: #435463;
+}
+
+
+.bundle-btn.btn.active,
+.bundle-btn.btn:active {
+  box-shadow: none;
+}
 
 .bundle-img {
   max-width: 130px;
