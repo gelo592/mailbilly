@@ -716,4 +716,7 @@ div#sib_embed_signup .button {
   margin-left: 12px;
 }
 
-div#sib_embed_signup div#sib_embed_signup
+div#sib_embed_signup .button:hover {
+  color: #435463;
+}
+
