@@ -409,7 +409,6 @@ p.accent-text {
     min-width: auto;
     width: 140px;
     font-size: 10px;
-    color: orange;
   }
 
   div#sib_embed_signup .wrapper#media {
@@ -687,7 +686,6 @@ div#sib_embed_signup input#email {
   min-width: auto;
   width: 250px;
   font-size: 12px;
-  color: orange;
 }
 
 div#sib_embed_signup .byline {
