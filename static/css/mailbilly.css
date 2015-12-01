@@ -288,14 +288,8 @@ p.accent-text {
 
 .bundle-img {
   max-width: 130px;
+  //width: 20%;
   padding: 10px 25px;
-}
-
-.bundlink {
-  width: 200px;
-  text-align: center;
-  display: inline-block;
-  text-align: center;
 }
 
 .big-money {
@@ -354,14 +348,22 @@ p.accent-text {
   .accent-text {
     font-size: 22px;
   }
+  .size-switcher {
+    float: none;
+  }
   .size-switcher button {
     font-size: 11px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
   .mail-box {
     margin-top: 30px;
   }
   h3 {
     font-size: 38px;
+  }
+  h3.accent-text {
+    font-size: 22px;
   }
   .speech-bubs {
     padding: 10px;
@@ -374,14 +376,94 @@ p.accent-text {
   .speech-bubs p {
     font-size: 12px;
   }
+
+  .big-money {
+    margin-bottom: -2px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .buy-btn {
+    width: 47px;
+  }
+
+  .bundle-btn {
+    width: 57px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .bundle-img {
+    width: 48px;
+    padding: 0px 3px;
+  }
+
+  .bundle-wrap {
+    padding-left: 50%;
+    margin-left: -140.5px;
+  }
+
+  div#sib_embed_signup input#email {
+    line-height: 180%;
+    min-width: auto;
+    width: 140px;
+    font-size: 10px;
+    color: orange;
+  }
 }
 
-}
 @media (min-width: 768px) and (max-width: 991px) {
+  .big-money {
+    margin-bottom: -6px;
+    font-size: 16px;
+    text-align: center;
+  }
 
+  .little-money {
+    font-size: 10px;
+  }
+
+  .buy-btn {
+    width: 86px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .bundle-btn {
+    width: 112px;
+  }
+  .bundle-img {
+    width: 74px;
+    padding: 9px 3px 0px;
+  }
+  .bundle-wrap {
+    padding-left: 50%;
+    margin-left: -290px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  .big-money {
+    margin-bottom: -6px;
+    font-size: 18px;
+    text-align: center;
+  }
 
+  .little-money {
+    font-size: 10px;
+  }
+  .buy-btn {
+    width: 98px;
+  }
+  .bundle-img {
+    width: 92px;
+    padding: 9px 3px 0px;
+  }
+  .bundle-btn {
+    width: 124px;
+  }
+  .bundle-wrap {
+    padding-left: 50%;
+    margin-left: -308px;
+  }
 }
 @media (min-width: 1200px) {
 
@@ -557,11 +639,6 @@ div#sib_embed_signup div.rowi {
   padding: 10px;
 }
 
-div#sib_embed_signup input[type=text] {
-  padding: 8px 4px;
-  width: 270px;
-}
-
 div#sib_embed_signup #sib_loading_gif_area {
   position: absolute;
   z-index: 9999;
@@ -594,10 +671,11 @@ div#sib_embed_signup .lil-tinyltr {
 
 div#sib_embed_signup input#email {
   padding: 8px 4px;
-  font-size: 14px;
-  width: 300px;
   line-height: 180%;
   min-width: auto;
+  width: 250px;
+  font-size: 12px;
+  color: orange;
 }
 
 div#sib_embed_signup .byline {
