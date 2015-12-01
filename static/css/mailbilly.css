@@ -98,7 +98,7 @@ a:hover {
 h3.accent-text {
   color: #DE8E3E;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   padding-bottom: 0px;
 }
 
@@ -363,7 +363,7 @@ p.accent-text {
     font-size: 38px;
   }
   h3.accent-text {
-    font-size: 22px;
+    font-size: 20px;
   }
   .speech-bubs {
     padding: 10px;
@@ -403,12 +403,17 @@ p.accent-text {
     margin-left: -140.5px;
   }
 
-  div#sib_embed_signup input#email {
+  div#sib_embed_signup input[type="text"]#email {
     line-height: 180%;
     min-width: auto;
     width: 140px;
     font-size: 10px;
     color: orange;
+  }
+
+  div#sib_embed_signup .wrapper#media {
+    margin-left: -100px;
+    padding-left: 50%;
   }
 }
 
@@ -439,6 +444,9 @@ p.accent-text {
     padding-left: 50%;
     margin-left: -290px;
   }
+  h3.accent-text {
+    font-size: 22px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .big-money {
@@ -463,6 +471,9 @@ p.accent-text {
   .bundle-wrap {
     padding-left: 50%;
     margin-left: -308px;
+  }
+  h3.accent-text {
+    font-size: 24px;
   }
 }
 @media (min-width: 1200px) {
