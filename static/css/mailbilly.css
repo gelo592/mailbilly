@@ -536,6 +536,37 @@ nav.billybar {
   color: #435463;
 }
 
+.navbar-default .navbar-nav>li.langie>a {
+  color: #435463;
+  font-size: 12px;
+}
+
+.navbar-default .navbar-nav>.langie.active>a {
+  color: #DE8E3E;
+  text-decoration: underline;
+  background-color: #fff;
+}
+.navbar-default .navbar-nav>.langie.in-use>a {
+  display: none;
+}
+
+.navbar-default .navbar-nav>.langie.active>a:focus,
+.navbar-default .navbar-nav>.langie.active>a:hover {
+  color: #DE8E3E;
+  text-decoration: underline;
+  background-color: #fff;
+}
+
+.navbar-default .navbar-nav>.langie.in-use>a:focus,
+.navbar-default .navbar-nav>.langie.in-use>a:hover {
+  display: none;
+}
+
+.navbar-default .navbar-nav>li.langie>a:focus,
+.navbar-default .navbar-nav>li.langie>a:hover {
+  color: #DE8E3E;
+  text-decoration: underline;
+}
 
 /* Send In Blue Integration */
 
