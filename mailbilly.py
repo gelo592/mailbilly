@@ -20,8 +20,12 @@ else:
 db = SQLAlchemy(app)
 
 @app.route('/')
-def index():
+def index_fr():
     return render_template("index.html")
+
+@app.route('/en')
+def index_en():
+  return render_template("index_en.html")
 
 @app.route('/supersecretlongurlwhywouldyougohere')
 def staging():
