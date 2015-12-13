@@ -699,6 +699,7 @@ div#sib_embed_signup div.description {
 
 div#sib_embed_signup div.rowi {
   padding: 10px;
+  padding-bottom: 0px;
 }
 
 div#sib_embed_signup #sib_loading_gif_area {
