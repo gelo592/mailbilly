@@ -53,12 +53,17 @@ a:hover {
   padding-top: 48px;
 }
 
-.row:nth-child(2),
-.row:nth-child(4) {
+.row:nth-child(2) {
+  //padding-top: 0px;
+  background-color: #DE8E3E;
+}
+
+.row:nth-child(3),
+.row:nth-child(5) {
   background: #F5F7FB;
 }
 
-.row:nth-child(3) {
+.row:nth-child(4) {
   background: #E5E7EB;
 }
 
@@ -199,6 +204,16 @@ p.accent-text {
   display: block;
   width: 0;
 }
+
+.value-icon {
+  text-align: center;
+  color: #FFF;
+}
+
+#value p {
+  text-align: center;
+}
+
 
 .word-counter {
   border: none;

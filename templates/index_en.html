@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/static/css/mailbilly.css" />
     <link href="https://fonts.googleapis.com/css?family=Satisfy|Kadwa|Poppins" rel="stylesheet" type='text/css' />
     <link href="https://file.myfontastic.com/fB3rWEx9bjayxwuidE5skU/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   {% endblock %}
 </head>
 
@@ -30,10 +31,10 @@
       </div>
       <div id="billynav" class="collapse navbar-collapse">
         <ul class="nav navbar-nav pull-right">
-          <li class="navie"><a href="/en#how">How it works</a></li>
-          <li class="navie"><a href="/en#price">Pricing</a></li>
-          <li class="navie"><a href="/en#size">Text Size</a></li>
-          <li class="navie"><a href="/en#faq">FAQ</a></li>
+          <li class="navie"><a href="#how">How it works</a></li>
+          <li class="navie"><a href="#price">Pricing</a></li>
+          <li class="navie"><a href="#size">Text Size</a></li>
+          <li class="navie"><a href="#faq">FAQ</a></li>
         </ul>
         <ul class="nav navbar-nav">
           <li class="langie in-use"><a href="/en">English</a></li>
@@ -48,11 +49,12 @@
       <div class="bubs-box">
         <img class="billy" src='/static/img/billy.png' />
         <div class="speech-bubs bubs-top">
-          <p>Howdy-do. I’m Billy.</p>
-          <p>Think of me as your virtual English assistant. </p>
+          <p>How do you do!</p>
+          <p> I’m Billy, your virtual English assistant.</p>
+          <p> </p>
         </div>
       </div>
-      <h3 class="accent-text">En moins d'une heure, recevez votre courrier dans un anglais impeccable.</h3>
+      <h3 class="accent-text">Send me an email with an English request, and I'll respond within the hour.</h3>
       <div id="sib_embed_signup">
         <div class="wrapper" id="media">
           <input type="hidden" id="sib_embed_signup_lang" value="en">
@@ -79,8 +81,14 @@
           </form>
         </div>
       </div>
-    </div><!-- end .row -->
+    </div>
 
+    <div id="value" class="row">
+      <h3>You can use Billy to:</h3>
+      <div class="col-sm-4"><p class="value-icon"><i class="fa fa-pencil-square-o fa-5x"></i></p><p>Proofread an important email.</p></div>
+      <div class="col-sm-4"><p class="value-icon"><i class="fa fa-comments-o fa-5x"></i></p><p>Translate a short text (FR ← → EN)</p></div>
+      <div class="col-sm-4"><p class="value-icon"><i class="fa fa-question fa-5x"></i></p><p>Answer any English related question</p></div>
+    </div><!-- end .row -->
 
     <div id="how" class="row">
       <h3>How it Works</h3>
@@ -261,7 +269,7 @@
     <div class="row" id="size">
       <h3>Examples of Text Sizes</h3>
       <div class="col-xs-10 col-xs-offset-1">
-        <span id="category">Quickie: </span><span id="word-count">31</span><span> mots</span>
+        <span id="category">Quickie: </span><span id="word-count">31</span><span> words</span>
         <div class="btn-group size-switcher" role="group" aria-label="...">
           <button type="button" class="btn btn-default" data-which="0">Quickie</button>
           <button type="button" class="btn btn-default" data-which="1">Shortie</button>

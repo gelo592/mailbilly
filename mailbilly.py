@@ -23,7 +23,7 @@ db = SQLAlchemy(app)
 def index_fr():
     return render_template("index.html")
 
-@app.route('/en')
+@app.route('/en/')
 def index_en():
   return render_template("index_en.html")
 
