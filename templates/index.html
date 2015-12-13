@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/static/css/mailbilly.css" />
     <link href="https://fonts.googleapis.com/css?family=Satisfy|Kadwa|Poppins" rel="stylesheet" type='text/css' />
     <link href="https://file.myfontastic.com/fB3rWEx9bjayxwuidE5skU/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   {% endblock %}
 </head>
 
@@ -30,7 +31,7 @@
         <!--<a class="navbar-brand" href="#">Project name</a>-->
       </div>
       <div id="billynav" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav pull-right">
+        <ul id="navers" class="nav navbar-nav">
           <li class="navie"><a href="#how">Comment ça marche </a></li>
           <li class="navie"><a href="#price">Tarifs</a></li>
           <li class="navie"><a href="#size">Taille</a></li>
@@ -47,7 +48,7 @@
     <div class="row">
       <h1 class="page-head">Mail Billy</h1>
       <div class="bubs-box">
-        <img class="billy" src='/static/img/billy.png' />
+        <div class="billy-box"><img class="billy" src='/static/img/billy.png' /></div>
         <div class="speech-bubs bubs-top">
           <p>Salut ! Moi c'est Billy.</p>
           <p> Je suis votre assistant virtuel de communication en anglais.</p>
@@ -82,6 +83,12 @@
       </div>
     </div><!-- end .row -->
 
+    <div id="value" class="row">
+      <h3>Utilisez-moi pour :</h3>
+      <div class="col-sm-4"><p class="value-icon"><i class="fa fa-pencil-square-o fa-5x"></i></p><p>Relire un e-mail important.</p></div>
+      <div class="col-sm-4"><p class="value-icon"><i class="fa fa-comments-o fa-5x"></i></p><p>Traduire un court texte. (FR /  EN)</p></div>
+      <div class="col-sm-4"><p class="value-icon"><i class="fa fa-question fa-5x"></i></p><p>Répondre à toute question relative à l'anglais.</p></div>
+    </div><!-- end .row -->
 
     <div id="how" class="row">
       <h3>Les étapes</h3>
@@ -166,8 +173,7 @@
       </div><!-- end .col-sm-6 -->
 
       <div class="visible-xs col-xs-10 col-xs-offset-1">
-        <h4>Relecture</h4>
-        <table class="table table-bordered table1">
+        <table id="tablie" class="table table-bordered table1">
           <thead>
             <tr>
               <th></th>
