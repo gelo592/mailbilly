@@ -116,8 +116,6 @@ $(function() {
   }
 
   function switchActiveNav(e) {
-    console.log($(e.toElement).parent());
-
     $(".navie").removeClass("active");
     $(e.toElement).parent().addClass("active");
   }
@@ -139,7 +137,6 @@ $(function() {
 
   function countWords(text) {
     var words, category;
-    console.log(text);
     if(text !== undefined && text !== null && text !== "") {
       words = text.match(/\S+/g).length;
     }
@@ -169,14 +166,17 @@ $(function() {
       category = "Special Order: ";
     }
 
-    console.log(category);
-    console.log(words);
-
     $("#word-count")[0].innerHTML = words;
     $("#category")[0].innerHTML = category;
   }
 
   attachListeners();
+
+$(document).ready(function () {
+  $(".navbar-nav li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
 
   /*$(".typed-1").typed({
       strings: ["Is we always okay for 18H ?", "Are we still okay for 6pm?"],
