@@ -29,6 +29,10 @@ table {
   border-radius: 4px;
 }
 
+#navers {
+  float: right;
+}
+
 a {
   color: #3B8BD2;
 }
@@ -275,7 +279,7 @@ p.accent-text {
 }
 
 .buy-btn {
-  background-color: #DE8E3E;
+  background-color: #E6AA6E;
   color: #fff;
   font-size: 14px;
   margin-top: 8px;
@@ -345,6 +349,12 @@ p.accent-text {
 }
 
 @media (max-width: 767px) {
+  #navers {
+    float: none;
+  }
+  .navbar-default .navbar-nav>li>a {
+    border-radius: 0px;
+  }
   .billy {
     min-width: 240px;
     width: 240px;
@@ -437,7 +447,23 @@ p.accent-text {
   }
 }
 
+#tablie th,
+#tablie td {
+  font-size: 15px;
+}
+
+.divider {
+  border-bottom: 1px solid #D0D4D8;
+}
+
+
 @media (min-width: 768px) and (max-width: 991px) {
+  #navers {
+    float: none;
+  }
+  .navbar-default .navbar-nav>li>a {
+    border-radius: 0px;
+  }
   .big-money {
     margin-bottom: -6px;
     font-size: 16px;
@@ -467,6 +493,11 @@ p.accent-text {
   h3.accent-text {
     font-size: 22px;
   }
+
+  #tablie th,
+  #tablie td {
+    font-size: 15px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .big-money {
@@ -495,7 +526,12 @@ p.accent-text {
   h3.accent-text {
     font-size: 24px;
   }
+  #tablie th,
+  #tablie td {
+    font-size: 15px;
+  }
 }
+
 @media (min-width: 1200px) {
 
 }
