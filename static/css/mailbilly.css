@@ -300,7 +300,7 @@ p.accent-text {
 .btn-default:hover .buy-btn,
 .btn-default.hover .buy-btn,
 .btn-default.focus .buy-btn,
-.btn-default:focus .buy-btn{
+.btn-default:focus .buy-btn {
   color: #435463;
 }
 
