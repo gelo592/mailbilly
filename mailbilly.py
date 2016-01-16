@@ -1,12 +1,21 @@
 import os
 import argparse
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask.ext.sqlalchemy import SQLAlchemy
+import stripe
 
 parser = argparse.ArgumentParser(description='blah')
 parser.add_argument('--furreal', help="do it for reals",
                     action="store_true")
+print os.environ['SECRET_KEY']
+
+stripe_keys = {
+    'secret_key': os.environ['SECRET_KEY'],
+    'publishable_key': os.environ['PUBLISHABLE_KEY']
+}
+
+stripe.api_key = stripe_keys['secret_key']
 
 app = Flask(__name__)
 
@@ -18,18 +27,6 @@ else:
   app.config.from_pyfile('test_config.py')
 
 db = SQLAlchemy(app)
-
-@app.route('/')
-def index_fr():
-    return render_template("index.html")
-
-@app.route('/en/')
-def index_en():
-  return render_template("index_en.html")
-
-@app.route('/supersecretlongurlwhywouldyougohere')
-def staging():
-  return render_template("staging.html")
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
