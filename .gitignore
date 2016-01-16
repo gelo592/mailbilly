@@ -8,3 +8,9 @@ mailbill
 .pyc
 
 .DS_Store
+
+certs
+
+venv
+
+config.py

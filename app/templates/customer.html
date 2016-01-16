@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <div id="customer" class="container-fluid">
+    <h2>Welcome {{user.name}}</h2>
+    <p>Emails sent this week: {{user.week_mail}}</p>
+    <p>Emails sent all time: {{user.all_mail}}</p>
+    <p>Credits remaining: {{user.credits}}</p>
+    <!--<span>Words purchasing power remaining: {{user.credits}}</span>-->
+    <button>Buy more credits!</button>
+  </div>
+{% endblock %}
