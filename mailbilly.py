@@ -35,7 +35,9 @@ def index_en():
     return render_template("index_en.html")
   else:
     print 'ahh'
-    return redirect(request.url.replace("http://", "https://"))
+    httpUrl = request.url.replace("http://", "https://")
+    print httpUrl
+    return redirect(httpUrl)
 
 @app.route('/supersecretlongurlwhywouldyougohere')
 def staging():
