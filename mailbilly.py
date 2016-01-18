@@ -29,9 +29,12 @@ def index_fr():
 
 @app.route('/en/')
 def index_en():
+  print request.url
   if request.url.find("https") >= 0:
+    print 'boo'
     return render_template("index_en.html")
   else:
+    print 'ahh'
     return redirect(request.url.replace("http://", "https://"))
 
 @app.route('/supersecretlongurlwhywouldyougohere')
@@ -40,4 +43,4 @@ def staging():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host=app.config['HOST'], port=port)
+    app.run(host=app.config['HOST'], port=port, debug=True)
