@@ -29,7 +29,7 @@ def index_fr():
 
 @app.route('/en/')
 def index_en():
-  if request.is_secure:
+  if request.url.find("https") >= 0:
     return render_template("index_en.html")
   else:
     return redirect(request.url.replace("http://", "https://"))
