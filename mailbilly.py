@@ -30,6 +30,7 @@ def index_fr():
 @app.route('/en/')
 def index_en():
   print request.url, request.url.find("https") >= 0
+  print request.is_secure
   if request.url.find("https") >= 0:
     print 'boo'
     return render_template("index_en.html")
