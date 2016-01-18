@@ -1,7 +1,7 @@
 import os
 import argparse
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from flask.ext.sqlalchemy import SQLAlchemy
 
 parser = argparse.ArgumentParser(description='blah')
@@ -21,11 +21,18 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def index_fr():
+  return render_template("index.html")
+  """if request.is_secure:
     return render_template("index.html")
+  else:
+    return redirect(request.url.replace("http://", "https://"))"""
 
 @app.route('/en/')
 def index_en():
-  return render_template("index_en.html")
+  if request.is_secure:
+    return render_template("index_en.html")
+  else:
+    return redirect(request.url.replace("http://", "https://"))
 
 @app.route('/supersecretlongurlwhywouldyougohere')
 def staging():
