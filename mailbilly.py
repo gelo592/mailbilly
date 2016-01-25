@@ -10,12 +10,12 @@ parser.add_argument('--furreal', help="do it for reals",
                     action="store_true")
 
 app = Flask(__name__)
-sslify = SSLify(app)
 
 args = parser.parse_args()
-print args.furreal
+
 if args.furreal:
   app.config.from_pyfile('config.py')
+  sslify = SSLify(app)
 else:
   app.config.from_pyfile('test_config.py')
 
@@ -37,7 +37,7 @@ def index_en():
 
 @app.route('/supersecretlongurlwhywouldyougohere')
 def staging():
-  return render_template("staging.html")
+  return render_template("index-staging.html")
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
