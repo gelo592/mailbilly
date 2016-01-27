@@ -5,6 +5,14 @@ node_modules
 .env
 
 mailbill
-.pyc
+*.pyc
+
+certs
+
+dointhings.txt
+
+.sass-cache
+
+venv
 
 .DS_Store
