@@ -1,0 +1,290 @@
+$swellow: #F8D146;
+$swellow_lt: #FBE494;
+$grey_lt: #E4E4E5;
+$grey: #A1A1A7;
+$grey_dk: #7A7A8C;
+
+$affirm: #3F8962;
+$deny: #CC5E67;
+
+@font-face {
+  font-family: "Hallo";
+  src: url("/fonts/Hallo%20sans.otf") format('opentype');
+}
+
+body {
+  color: $grey;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+
+.main-header {
+  .header {
+    //font-family: "Hallo", sans-serif;
+    color: $swellow;
+    font-size: 40px;
+    display: inline-block;
+    margin: 0 0 0 12px;
+  }
+
+  .header-link {
+    margin: 10px 12px 0 0;
+  }
+}
+
+.login-landing, .signup-page {
+  .login-form {
+    margin-left: -76px;
+    padding-left: 50%;
+    padding-top: 40px;
+  }
+
+  .header {
+    h1 {
+      font-family: "Hallo", sans-serif;
+      text-align: center;
+      color: $swellow;
+      font-size: 80px;
+    }
+  }
+
+  .control-group {
+    padding-bottom: 20px;
+  }
+
+  .valid-form {
+    padding-left: 4px;
+    color: $affirm;
+  }
+
+  .invalid-form {
+    padding-left: 4px;
+    color: $deny;
+  }
+
+  .radio-label {
+    padding: 4px;
+  }
+}
+
+.home-page {
+  .name {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: $grey_dk;
+  }
+  .progress-bar {
+    background-color: $swellow_lt;
+  }
+
+}
+
+.dualnback-page {
+  .preview-boxes {
+    text-align: center;
+    .boxie {
+      position: relative;
+      width: 76px;
+      height: 76px;
+      padding: 6px;
+      display: inline-block;
+      background-color: #fff;
+      margin: 0 26px 26px 26px;
+      border: solid 1px $grey_lt;
+      border-radius: 4px;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+
+      img.unknown-img, img.covered-img, img.show-img {
+        display: none;
+      }
+
+      &.unknown {
+        box-shadow: inset #BDBDBD 0px 0px 5px 0px;
+
+        img.unknown-img {
+          display: inline;
+        }
+      }
+
+      &.covered {
+        img.covered-img {
+          display: inline;
+        }
+      }
+
+      &.uncovered {
+        img.show-img {
+          display: inline;
+        }
+      }
+
+      &.active {
+        .location-indicator {
+          display: inline-block;
+          position: absolute;
+          height: 6px;
+          left: 0px;
+          background-color: $swellow;
+          bottom: -10px;
+        }
+      }
+      .correct-check {
+        position: absolute;
+        display: none;
+        color: #D8A607;
+        left: 14px;
+        top: 4px;
+        font-size: 46px;
+      }
+
+      &.correct {
+        .correct-check {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .game-area {
+    text-align: center;
+    display: inline-block;
+    padding-left: 50%;
+    &.playin {
+      margin-left: -210px;
+    }
+    &.finish {
+      margin-left: -460px;
+
+      .finish-message {
+        width: 230px;
+      }
+
+      .finish-message button {
+        margin-top: 20px;
+      }
+    }
+    .main-pic {
+      position: relative;
+
+      .guess-inputtery {
+        width: 420px;
+        padding-top: 460px;
+      }
+
+      #guess-box {
+        background-color: #DDDDDB;
+      }
+
+      img {
+        width: 420px;
+        height: 440px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid $grey_lt;
+        border-radius: 4px;
+      }
+
+      .learn-img {
+        img {
+          position: absolute;
+        }
+      }
+
+      .img-text-box {
+        font-size: 24px;
+        width: 420px;
+        padding-top: 440px;
+        text-align: left;
+      }
+
+      .img-text {
+        width: 400px;
+      }
+
+      .text-trans {
+        display: none;
+        border: solid 1px $grey_lt;
+        position: absolute;
+        &.showTrans {
+          display: block;
+        }
+      }
+
+      .next-card {
+        float: right;
+      }
+
+      .card-box {
+        //width: 420px;
+        //height: 440px;
+        perspective: 800px;
+
+        .card {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          transform-style: preserve-3d;
+          transition: transform 1s;
+
+          .card-front, .card-back {
+            margin: 0;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+          }
+
+          .card-front {
+            transform: rotateY( 180deg );
+          }
+        }
+      }
+    }
+    .guess-correctory {
+      padding-top: 460px;
+      width: 420px;
+      font-size: 20px;
+
+      .yay {
+        color: $affirm;
+      }
+
+      .noo {
+        color: $deny;
+      }
+    }
+  }
+
+  .audio {
+    padding-right: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $swellow;
+    }
+  }
+
+}
+  .tutorial-zone {
+    //position: absolute;
+    //bottom: 0px;
+    //right: 0px;
+    //padding-bottom: 20px;
+
+    .enter-tutorial {
+      margin-top: 40px;
+      background-image: url('../img/tutorial-enter.png');
+      width: 400px;
+      height: 153px;
+    }
+    button {
+      display: block;
+      margin-top: 20px;
+    }
+  }

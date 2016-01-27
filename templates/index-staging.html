@@ -12,7 +12,7 @@
   {% block styles %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/static/css/mailbill-stage.css" />
-    <link href="https://fonts.googleapis.com/css?family=Satisfy|Kadwa|Poppins" rel="stylesheet" type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Satisfy|Kadwa|Open+Sans" rel="stylesheet" type='text/css' />
     <link href="https://file.myfontastic.com/fB3rWEx9bjayxwuidE5skU/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/ionicons.min.css" />
@@ -33,7 +33,7 @@
       </div>
       <div id="billynav" class="collapse navbar-collapse">
         <ul id="navers" class="nav navbar-nav">
-          <li class="navie"><a href="#how">Les étapes</a></li>
+          <li class="navie"><a href="#how">Etapes</a></li>
           <li class="navie"><a href="#price">Tarifs</a></li>
           <li class="navie hidden-xs"><a href="#equipe">Equipe</a></li>
           <li class="navie"><a href="#faq">FAQ</a></li>
@@ -41,8 +41,6 @@
         <ul class="nav navbar-nav">
           <li><a href="mailto:billy@mailbilly.com?subject=Help Billy!"><i class="icon ion-android-mail"></i></a></li>
           <li><a href="tel:+33355870992"><i class="icon ion-android-call"></i></a></li>
-          <li><a href="https://twitter.com/mailbillymail"><i class="icon ion-social-twitter"></i></a></li>
-          <li><a href="https://www.facebook.com/mailbilly"><i class="icon ion-social-facebook"></i></a></li>
         </ul>
         <!--<ul class="nav navbar-nav">
           <li class="langie"><a href="/en">English</a></li>
@@ -92,9 +90,15 @@
 
     <div id="value" class="row">
       <h3>Utilisez-moi pour :</h3>
-      <div class="col-sm-4"><p class="value-icon"><i class="icon ion-email"></i></p><p>Mails</p></div>
-      <div class="col-sm-4"><p class="value-icon"><i class="icon ion-chatbubbles"></i></p><p>Médias Sociaux</p></div>
-      <div class="col-sm-4"><p class="value-icon"><i class="icon ion-document-text"></i></p><p>CV et Documents</p></div>
+      <div class="col-sm-4">
+        <p class="value-icon"><i class="icon ion-email"></i></p><p>Proofread your mail and let us add some native flare</p>
+      </div>
+      <div class="col-sm-4">
+        <p class="value-icon"><i class="icon ion-document-text"></i></p><p>Translate CV or document for an international audience</p>
+      </div>
+      <div class="col-sm-4">
+        <p class="value-icon"><i class="icon ion-clock"></i></p><p>Get your texts quickly! Average response time 24min</p>
+      </div>
     </div><!-- end .row -->
 
     <div id="how" class="row">
@@ -119,10 +123,11 @@
     </div><!-- end .row -->
 
     <div id="price" class="row">
-      <h3>Nos Tarif</h3>
-      <!--<h3 class="accent-text">Our prices depend on the type of text so get a quote now.</h3>
-      <button class="btn btn-default" data-toggle="modal" data-target="#devis">Devis Immediate</button>-->
-      <div class="col-xs-offset-2 col-xs-8">
+      <h3>Nos Tarifs</h3>
+      <div class="col-xs-12">
+
+      </div>
+      <!--<div class="col-xs-offset-2 col-xs-8">
         <div class="left-side">
           <div id="price-quote">Prix: $0.40</div>
           <div id="how-group" class="btn-group size-switcher" data-toggle="buttons">
@@ -146,9 +151,8 @@
           </div>
         </div>
         <textarea id="word-counter" class="word-counter">Collez votre texte pour estimer sa taille et sa tarification.</textarea>
-      </div>
+      </div>-->
       <div class="col-xs-12">
-        <p class="center-text" >Achetez un lot de crédits et vous recevrez 10% de crédit en bonus !</p>
         <div class="bundle-wrap">
           <div class="bundle btn-group" role="group" aria-label="...">
             <a class=" bundle-btn btn btn-default" href="https://pro.pumpkin-app.com/pay/bundle1">
@@ -184,10 +188,12 @@
               <div class="buy-btn">
                 <p class="big-money">500€ HT</p>
                 <p class="little-money hidden-xs">+50€ offerts</p>
-                </div>
+              </div>
             </a>
           </div>
         </div>
+        <p class="center-text" >Achetez un lot de crédits et vous recevrez 10% de crédit en bonus !</p>
+        <button class="btn btn-default" data-toggle="modal" data-target="#devis">Devis Immediate</button>
       </div><!-- end .col-sm-6 -->
     </div><!-- end .row -->
 

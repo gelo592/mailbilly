@@ -6,7 +6,7 @@ Maroon #9C044F*/
 
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   color: #435463;
 }
@@ -113,7 +113,6 @@ a:hover {
 }
 
 h3.accent-text {
-  color: #DE8E3E;
   text-align: center;
   font-size: 28px;
   padding-bottom: 0px;
@@ -813,7 +812,7 @@ div#sib_embed_signup .containeri {
 div#sib_embed_signup .containeri .button {
   color: #ffffff;
   background: #E6AA6E;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 div#sib_embed_signup .wrapper {
