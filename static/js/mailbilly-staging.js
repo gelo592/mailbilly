@@ -8,7 +8,19 @@ $(function() {
     $("#billynav ul").click(switchActiveNav);
 
     $('body').scrollspy({target: "#billybar", offset: 90});
+
+    $("#what-group label").mouseover(showToolTip);
+    $("#what-group").mouseout(function(e){$(".tipper").hide()});
   }
+
+  function showToolTip(e) {
+    console.log(e.toElement);
+    console.log($(e.toElement).data("tiptitle"));
+    $(".tooltip-inner")[0].innerHTML = $(e.toElement).data("tiptitle");
+
+    $(".tipper").show();
+  }
+
 
   function switchActiveNav(e) {
     $(".navie").removeClass("active");
@@ -96,7 +108,7 @@ $(function() {
 
   var handler = StripeCheckout.configure({
     key: 'pk_test_LygWBNXL6QR1oVSAHN4T6CGf',
-    image: 'static/img/billysquare.svg',
+    image: '/static/img/billysquare.svg',
     locale: 'auto',
     token: function(token) {
       var $token = $('<input type=hidden name=stripeToken />').val(token.id);
@@ -107,8 +119,8 @@ $(function() {
   });
 
   $('#charge-btn').click(charge);
-  $('#charge35').click({amount: 3500}, charge);
-  $('#charge75').click({amount: 7500}, charge);
+  $('#charge35').click({amount: 5000}, charge);
+  $('#charge75').click({amount: 10000}, charge);
   $('#charge150').click({amount: 15000}, charge);
   $('#charge300').click({amount: 30000}, charge);
   $('#charge500').click({amount: 50000}, charge);

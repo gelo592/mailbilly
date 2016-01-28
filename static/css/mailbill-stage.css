@@ -46,6 +46,49 @@ table {
 }
 
 
+.tipper {
+  top: 24px;
+  right: -200px;
+  position: absolute;
+  display: none;
+}
+
+.tipper::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid transparent;  /* left arrow slant */
+  border-top: 8px solid transparent; /* right arrow slant */
+  border-right: 8px solid #fff; /* bottom, add background color here */
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 11px;
+  left: -7px;
+}
+
+.tipper::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid transparent;  /* left arrow slant */
+  border-top: 8px solid transparent; /* right arrow slant */
+  border-right: 8px solid #ccc; /* bottom, add background color here */
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 11px;
+  left: -8px;
+}
+
+.tipper .tooltip-inner {
+  background-color: #fff;
+  color: #435463;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
 /* overriding bootstraps nav */
 
 .navbar {
