@@ -21,6 +21,14 @@ body {
   color: #A1A1A7;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
+.flash {
+  position: absolute;
+  top: 50px;
+  right: 10px; }
+
+.lefters {
+  float: left; }
+
 .main-header .header {
   color: #F8D146;
   font-size: 40px;

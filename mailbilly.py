@@ -1,15 +1,26 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 import argparse
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash, Markup
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask_sslify import SSLify
+import stripe
+
+stripe_keys = {
+    'secret_key': os.environ['SECRET_KEY'],
+    'publishable_key': os.environ['PUBLISHABLE_KEY']
+}
+stripe.api_key = stripe_keys['secret_key']
 
 parser = argparse.ArgumentParser(description='blah')
 parser.add_argument('--furreal', help="do it for reals",
                     action="store_true")
 
 app = Flask(__name__)
+app.secret_key = 'some_secret'
 
 args = parser.parse_args()
 
@@ -23,21 +34,31 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def index_fr():
-  return render_template("index.html")
-  """if request.is_secure:
-    return render_template("index.html")
-  else:
-    return redirect(request.url.replace("http://", "https://"))"""
+  return render_template("index.html", key=stripe_keys['publishable_key'])
 
 @app.route('/en/')
 def index_en():
-  print request.url, request.url.find("https") >= 0
-  print request.is_secure
-  return render_template("index_en.html")
+  return render_template("index_en.html", key=stripe_keys['publishable_key'])
 
 @app.route('/supersecretlongurlwhywouldyougohere')
 def staging():
-  return render_template("index-staging.html")
+  return render_template("staging.html", key=stripe_keys['publishable_key'])
+
+@app.route('/charge', methods=['POST'])
+def charge():
+  customer = stripe.Customer.create(
+    email=request.form['stripeEmail'],
+    card=request.form['stripeToken']
+  )
+
+  charge = stripe.Charge.create(
+    customer=customer.id,
+    amount=request.form['amount'],
+    currency='eur',
+    description='Credit Bundle'
+  )
+  flash(Markup('Votre commande a été validée !'))
+  return redirect('supersecretlongurlwhywouldyougohere')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

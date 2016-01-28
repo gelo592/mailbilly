@@ -1,0 +1,47 @@
+<script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<button id="customButton">Purchase</button>
+<form action="/charge" method="post">
+  <article>
+    <label>
+      <span>Amount is $5.00</span>
+    </label>
+  </article>
+</form>
+
+<script>
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_LygWBNXL6QR1oVSAHN4T6CGf',
+    image: 'static/img/billy.png',
+    locale: 'auto',
+    token: function(token) {
+      console.log('token', token);
+      console.log('token', token.name);
+      console.log('token', token.email);
+      var $token = $('<input type=hidden name=stripeToken />').val(token.id);
+      var $email = $('<input type=hidden name=stripeEmail />').val(token.email);
+      $('#devis-form').append($token).append($email).submit();
+    },
+    allowRememberMe: false
+  });
+
+  $('#customButton').click({amount: 500}, function(e) {
+    console.log(e);
+    // Open Checkout with further options
+    handler.open({
+      name: 'Mail Billy',
+      currency: "eur",
+      amount: e.data.amount,
+      allowRememberMe: false,
+      panelLabel: "hi theres"
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>

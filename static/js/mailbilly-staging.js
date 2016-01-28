@@ -25,16 +25,16 @@ $(function() {
 
     switch (multiSwitch) {
       case 0:
-        multi = 0.04;
+        multi = 4.5;
         break;
       case 1:
-        multi = 0.08;
+        multi = 8.5;
         break;
       case 2:
-        multi = 0.12;
+        multi = 12;
         break;
       case 3:
-        multi = 0.18;
+        multi = 18;
         break;
     }
 
@@ -52,13 +52,23 @@ $(function() {
       words = 0;
     }
 
-    var quote = multi * words;
+    var quoteCents = Math.floor(multi * words);
+    quoteCents = quoteCents < 200 ? 200 : quoteCents;
+    var quote = quoteCents.toString();
 
-    quote = Math.ceil(quote * 100) / 100;
+    if(quote.length == 1) {
+      quote = "00" + quote;
+    }
+    else if(quote.length == 2) {
+      quote = "0" + quote;
+    }
 
-    $("#price-quote")[0].innerHTML = "Prix: $" + quote;
-    $("#word-count")[0].innerHTML = "Mots: " + words;
+    quote = quote.slice(0, -2) + "," + quote.slice(-2);
 
+    $("#price-quote")[0].innerHTML = quote + "€";
+    $("#word-count")[0].innerHTML = words;
+    $("#credits")[0].innerHTML = quote + "€";
+    $("#credits").data('amount', quoteCents);
   }
 
   function countWordsWrap (e) {
@@ -83,6 +93,51 @@ $(function() {
     $("#word-count")[0].innerHTML = words;
     $("#price-quote")[0].innerHTML = quote;
   }
+
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_LygWBNXL6QR1oVSAHN4T6CGf',
+    image: 'static/img/billysquare.svg',
+    locale: 'auto',
+    token: function(token) {
+      var $token = $('<input type=hidden name=stripeToken />').val(token.id);
+      var $email = $('<input type=hidden name=stripeEmail />').val(token.email);
+
+      $('#devis-form').append($token).append($email).submit();
+    }
+  });
+
+  $('#charge-btn').click(charge);
+  $('#charge35').click({amount: 3500}, charge);
+  $('#charge75').click({amount: 7500}, charge);
+  $('#charge150').click({amount: 15000}, charge);
+  $('#charge300').click({amount: 30000}, charge);
+  $('#charge500').click({amount: 50000}, charge);
+
+   function charge(e) {
+    console.log(e.data)
+    var amount;
+    if(e.data && 'amount' in e.data) {
+      amount = e.data.amount;
+    }
+    else {
+      amount = $("#credits").data("amount");
+    }
+    $('#devis-form').append($('<input type=hidden name=amount />').val(amount));
+
+    // Open Checkout with further options
+    handler.open({
+      name: 'Mail Billy',
+      currency: "eur",
+      amount: amount,
+      allowRememberMe: false
+    });
+    e.preventDefault();
+  }
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
 
   attachListeners();
 
