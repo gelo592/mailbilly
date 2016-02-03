@@ -52,7 +52,10 @@ def charge():
     email=request.form['stripeEmail'],
     card=request.form['stripeToken']
   )
+  print "hi"
   print request.form['amount']
+  print "amount"
+
   charge = stripe.Charge.create(
     customer=customer.id,
     amount=request.form['amount'],
