@@ -52,7 +52,7 @@ def charge():
     currency='eur',
     description='Mail Billy Credits'
   )
-  flash(Markup('Votre commande a été validée !'))
+  #flash(Markup('Votre commande a été validée !'))
   return redirect('supersecretlongurlwhywouldyougohere')
 
 if __name__ == '__main__':
