@@ -107,7 +107,7 @@ $(function() {
   }
 
   var handler = StripeCheckout.configure({
-    key: 'pk_test_LygWBNXL6QR1oVSAHN4T6CGf',
+    key: 'pk_live_MV0mg91qG8h5ekWBHd57Iu4i',
     image: '/static/img/billysquare.svg',
     locale: 'auto',
     token: function(token) {
@@ -119,11 +119,11 @@ $(function() {
   });
 
   $('#charge-btn').click(charge);
-  $('#charge35').click({amount: 5000}, charge);
-  $('#charge75').click({amount: 10000}, charge);
-  $('#charge150').click({amount: 15000}, charge);
-  $('#charge300').click({amount: 30000}, charge);
-  $('#charge500').click({amount: 50000}, charge);
+  $('#charge35').click({amount: 3000}, charge);
+  $('#charge75').click({amount: 9000}, charge);
+  $('#charge150').click({amount: 18000}, charge);
+  $('#charge300').click({amount: 36000}, charge);
+  $('#charge500').click({amount: 60000}, charge);
 
    function charge(e) {
     console.log(e.data)
