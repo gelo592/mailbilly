@@ -46,18 +46,21 @@ def staging():
 
 @app.route('/charge', methods=['POST'])
 def charge():
+  print request.form['stripeToken']
+  print request.form['stripeEmail']
   customer = stripe.Customer.create(
     email=request.form['stripeEmail'],
     card=request.form['stripeToken']
   )
-
+  print request.form['amount']
   charge = stripe.Charge.create(
     customer=customer.id,
     amount=request.form['amount'],
     currency='eur',
     description='Credit Bundle'
   )
-  flash(Markup('Votre commande a été validée !'))
+  print "lalala"
+  #flash(Markup('Votre commande a été validée !'))
   return redirect('supersecretlongurlwhywouldyougohere')
 
 if __name__ == '__main__':
