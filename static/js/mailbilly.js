@@ -133,6 +133,7 @@ $(function() {
     }
     else {
       amount = $("#credits").data("amount");
+      amount = amount * 1.2;
     }
     $('#devis-form').append($('<input type=hidden name=amount />').val(amount));
 
