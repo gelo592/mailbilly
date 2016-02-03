@@ -107,7 +107,7 @@ $(function() {
   }
 
   var handler = StripeCheckout.configure({
-    key: 'pk_live_MV0mg91qG8h5ekWBHd57Iu4i',
+    key: 'pk_test_LygWBNXL6QR1oVSAHN4T6CGf',
     image: '/static/img/billysquare.svg',
     locale: 'auto',
     token: function(token) {
