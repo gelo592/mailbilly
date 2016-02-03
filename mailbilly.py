@@ -53,7 +53,7 @@ def charge():
     description='Mail Billy Credits'
   )
   #flash(Markup('Votre commande a été validée !'))
-  return redirect('supersecretlongurlwhywouldyougohere')
+  return redirect('/')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
