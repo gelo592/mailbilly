@@ -40,9 +40,9 @@ def index_fr():
 def index_en():
   return render_template("index_en.html", key=stripe_keys['publishable_key'])
 
-@app.route('/supersecretlongurlwhywouldyougohere')
-def staging():
-  return render_template("staging.html", key=stripe_keys['publishable_key'])
+#@app.route('/supersecretlongurlwhywouldyougohere')
+#def staging():
+#  return render_template("index-staging.html", key=stripe_keys['publishable_key'])
 
 @app.route('/charge', methods=['POST'])
 def charge():
